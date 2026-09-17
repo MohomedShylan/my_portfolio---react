@@ -15,8 +15,8 @@ const Navbar = () => {
         </a>
       </div>
       
-      {/* Mobile Hamburger Icon */}
-      <div className="hamburger" onClick={toggleMenu}>
+      {/* Mobile Hamburger Icon - Added 'active' class condition */}
+      <div className={`hamburger ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
