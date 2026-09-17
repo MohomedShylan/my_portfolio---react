@@ -30,7 +30,7 @@ const Projects = () => {
       description: "Full-stack client and admin portals with Stripe integration and AI image analysis.",
       fullDetails: "A comprehensive management platform featuring role-based portals for clients and administrators. It incorporates automated assignment workflows and secure payment processing via the Stripe API. A key technical integration is a custom AI-driven agricultural image analysis module.",
       tech: ["React.js", "Firebase", "Stripe API", "Node.js"],
-      images: ["/project1-a.jpg", "/project1-b.jpg"], 
+      images: ["/drone1.png", "/drone2.png"], 
       icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>
     },
    {
@@ -42,15 +42,7 @@ const Projects = () => {
       images: ["/poster1.jpg", "/poster2.jpg",, "/poster.jpg", "/nametag.png"],
       icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>
     },
-    {
-      id: "iot-environmental-logger",
-      title: "IoT Environmental Logger",
-      description: "Hardware pipeline streaming telemetry to cloud spreadsheets via MicroPython.",
-      fullDetails: "An automated hardware-to-cloud pipeline utilizing a Raspberry Pi Pico W. It interfaces directly with a BMP280 sensor via MicroPython to capture continuous temperature and pressure telemetry (ignoring humidity requirements per specific hardware constraints). The system manages live telemetry streams directly into cloud spreadsheets, featuring robust handling for offline network interruptions.",
-      tech: ["MicroPython", "Raspberry Pi Pico W", "BMP280", "Cloud APIs"],
-      images: ["/project3-a.jpg", "/project3-b.jpg"],
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect></svg>
-    },
+   
    
   ];
 
