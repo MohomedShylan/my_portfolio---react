@@ -633,44 +633,317 @@ body {
   }
 }
 
-/* Contact Info Links */
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact-section {
+  padding: 5rem 5%;
+  background-color: #f5f5f5;
+  width: 100%;
+}
+
+.contact-section * {
+  box-sizing: border-box;
+}
+
+/* Contact Header */
+.contact-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.contact-header h2 {
+  font-size: 2.8rem;
+  color: #111111;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+
+.contact-header p {
+  color: #888888;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Main Contact Container */
+.contact-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* =========================================
+   LEFT SIDE - CONTACT INFORMATION
+========================================= */
+
+.contact-info-card {
+  flex: 1;
+  min-width: 0;
+  background-color: #e62b3c;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 4rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(230, 43, 60, 0.2);
+}
+
+.contact-info-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  max-width: 100%;
+}
+
+.info-item svg {
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
 .info-item a {
-  color: inherit;
+  color: #ffffff;
   text-decoration: none;
   overflow-wrap: anywhere;
+  transition: opacity 0.3s ease;
 }
 
 .info-item a:hover {
+  opacity: 0.8;
   text-decoration: underline;
 }
 
-/* Sending State */
+/* =========================================
+   RIGHT SIDE - CONTACT FORM
+========================================= */
+
+.contact-form {
+  flex: 1.2;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Name and Email Row */
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.form-row .form-input {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Form Input Fields */
+.form-input,
+.form-textarea {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.2rem;
+
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+
+  background-color: transparent;
+  font-size: 1rem;
+  color: #333333;
+  font-family: inherit;
+
+  transition: border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+/* Placeholder Styling */
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #888888;
+  opacity: 1;
+}
+
+/* Input Focus Effect */
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #e62b3c;
+  box-shadow: 0 0 0 3px rgba(230, 43, 60, 0.1);
+}
+
+/* Message Box */
+.form-textarea {
+  min-height: 180px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* =========================================
+   SEND BUTTON
+========================================= */
+
+.btn-send {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  background-color: #e62b3c;
+  color: #ffffff;
+
+  padding: 0.9rem 2.5rem;
+  border: none;
+  border-radius: 8px;
+
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: inherit;
+
+  cursor: pointer;
+  align-self: flex-start;
+
+  box-shadow: 0 4px 10px rgba(230, 43, 60, 0.3);
+
+  transition: transform 0.2s ease,
+              background-color 0.2s ease;
+}
+
+/* Button Hover */
+.btn-send:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background-color: #d42232;
+}
+
+/* Button Disabled / Sending */
 .btn-send:disabled {
   opacity: 0.65;
   cursor: not-allowed;
   transform: none;
 }
 
-/* Form Feedback */
+.btn-send svg {
+  flex-shrink: 0;
+}
+
+/* =========================================
+   FORM STATUS MESSAGES
+========================================= */
+
 .form-status {
+  width: 100%;
   padding: 1rem 1.2rem;
   border-radius: 8px;
+
   font-size: 0.95rem;
   font-weight: 500;
   line-height: 1.5;
   margin: 0;
 }
 
+/* Success Message */
 .form-status.success {
   background-color: #e8f8ed;
   color: #16783b;
   border: 1px solid #b8e5c5;
 }
 
+/* Error Message */
 .form-status.error {
   background-color: #fdebec;
   color: #c62828;
   border: 1px solid #f5b8be;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media screen and (max-width: 968px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info-card {
+    padding: 3rem 1.5rem;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media screen and (max-width: 600px) {
+  .contact-section {
+    padding: 3.5rem 5%;
+  }
+
+  .contact-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .contact-header h2 {
+    font-size: 2rem;
+  }
+
+  .contact-header p {
+    font-size: 0.95rem;
+  }
+
+  .contact-container {
+    gap: 2rem;
+  }
+
+  .contact-info-card {
+    padding: 2.5rem 1rem;
+  }
+
+  .contact-info-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .info-item {
+    font-size: 0.9rem;
+    gap: 0.5rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 0.95rem;
+  }
+
+  .btn-send {
+    width: 100%;
+    align-self: stretch;
+  }
 }
 
 
