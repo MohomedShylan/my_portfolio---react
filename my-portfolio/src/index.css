@@ -632,146 +632,47 @@ body {
     padding: 2.5rem 1.5rem;
   }
 }
-/* --- Contact Section Styles --- */
-.contact-section {
-  padding: 5rem 5%;
-  background-color: #f5f5f5; 
+
+/* Contact Info Links */
+.info-item a {
+  color: inherit;
+  text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
-.contact-header {
-  text-align: center;
-  margin-bottom: 3.5rem;
+.info-item a:hover {
+  text-decoration: underline;
 }
 
-.contact-header h2 {
-  font-size: 2.8rem;
-  color: #111111;
-  margin-bottom: 0.5rem;
-  font-weight: 800;
+/* Sending State */
+.btn-send:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
 }
 
-.contact-header p {
-  color: #888888;
-  font-size: 1.1rem;
-}
-
-.contact-container {
-  display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 2rem;
-  align-items: stretch;
-}
-
-/* Left Side: Info Card */
-.contact-info-card {
-  flex: 1;
-  background-color: #e62b3c; 
-  color: white;
-  border-radius: 12px;
-  padding: 4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(230, 43, 60, 0.2);
-}
-
-.contact-info-card h3 {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-  font-weight: 700;
-}
-
-.info-item {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  font-weight: 500;
-}
-
-/* Right Side: Form */
-.contact-form {
-  flex: 1.2;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.form-row {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.form-input, .form-textarea {
-  width: 100%;
+/* Form Feedback */
+.form-status {
   padding: 1rem 1.2rem;
-  border: 1px solid #dcdcdc;
   border-radius: 8px;
-  background-color: transparent;
-  font-size: 1rem;
-  color: #333;
-  font-family: inherit;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
 }
 
-.form-input:focus, .form-textarea:focus {
-  outline: none;
-  border-color: #e62b3c; /* Theme Red on focus */
-  box-shadow: 0 0 0 3px rgba(230, 43, 60, 0.1);
+.form-status.success {
+  background-color: #e8f8ed;
+  color: #16783b;
+  border: 1px solid #b8e5c5;
 }
 
-.btn-send {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  background-color: #e62b3c; /* Theme Red */
-  color: white;
-  padding: 0.9rem 2.5rem;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  align-self: flex-start;
-  box-shadow: 0 4px 10px rgba(230, 43, 60, 0.3);
-  transition: transform 0.2s, background-color 0.2s;
+.form-status.error {
+  background-color: #fdebec;
+  color: #c62828;
+  border: 1px solid #f5b8be;
 }
 
-.btn-send:hover {
-  transform: translateY(-2px);
-  background-color: #d42232; /* Slightly darker red on hover */
-}
-
-/* --- Responsive Design for Contact --- */
-@media screen and (max-width: 968px) {
-  .contact-container {
-    flex-direction: column;
-  }
-  
-  .contact-info-card {
-    padding: 3rem 1.5rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .form-row {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .btn-send {
-    width: 100%;
-  }
-  
-  .info-item {
-    font-size: 0.95rem;
-  }
-}
 
 /* --- Footer Section Styles --- */
 .footer-section {
